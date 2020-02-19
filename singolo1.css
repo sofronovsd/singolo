@@ -1,6 +1,7 @@
 * {
     margin: 0;
 }
+
 body {
     width: 1020px;
 }
@@ -11,7 +12,7 @@ body {
 
 .header {
     display: flex;
-    height: 95px;
+    height: 89px;
     background-color: #292d37;
     border-bottom: #2f3444 6px solid;
     align-items: center;
@@ -22,10 +23,16 @@ body {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
+    margin-right: 20px;
 }
 
 .logo {
-    color: white;
+    letter-spacing: -0.5px;
+    margin-left: 20px;
+    font-size: 25px;
+    line-height: 25px;
+    color: #ffffff;
+    font-family: "Lato", serif;
 }
 
 .logo-star {
@@ -34,35 +41,70 @@ body {
 
 .navigation-item {
     display: inline-block;
-    margin: 20px 10px;
+    margin: 30px 0 20px 0;
+    font-size: 12px;
     color: white;
+    font-family: "Lato", serif;
 }
 
 .navigation-item:hover {
     color: red;
+    cursor: pointer;
 }
 
-.navigation-item:last-child::after {
-    display: none;
-}
-
-.navigation-item::after {
-    content: ".";
-    margin: 0 20px;
-    font-size: 14px;
+.navigation-separator {
+    display: inline-block;
+    padding: 24px 12px 20px 13px;
+    color: white;
 }
 
 .slider {
-    height: 500px;
+    height: 594px;
     background-color: #f16c64;
-    border-bottom: #eb676b 5px solid;
+    border-bottom: #eb676b 6px solid;
+    display: flex;
+}
+
+.arrow-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: rotate(180deg);
+    margin: -3px 24px 0 0;
+}
+
+.arrow-left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: -3px 0 0 24px;
+}
+
+.arrow-interactive:hover {
+    cursor: pointer;
+}
+
+.pictures {
+    flex-grow: 1;
+}
+
+.iphone-vertical {
+    position: absolute;
+    left: 96px;
+    top: 140px;
+}
+
+.iphone-horizontal {
+    position: absolute;
+    left: 425px;
+    top: 270px;
 }
 
 .service-container {
-    height: 300px;
+    height: 453px;
     background-color: #f2f3f3;
-    padding: 20px;
-    border-bottom: #f2f3f3 5px solid;
+    padding: 40px;
+    border-bottom: #f2f3f3 6px solid;
 }
 
 .service-header {
@@ -71,6 +113,20 @@ body {
 
 .service-title {
     margin: 10px 0;
+    font-family: "Lato", serif;
+    font-size: 30px;
+    color: #666d8a;
+}
+
+.service-description {
+    margin-top: 20px;
+    font-family: "Lato", serif;
+    color: #666d8a;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    line-height: 30px;
+    text-align: justify;
 }
 
 .service-items {
@@ -87,7 +143,7 @@ body {
 }
 
 .item-left-side {
-    width: 20%;
+    width: auto;
 }
 
 .item-right-side {
@@ -96,6 +152,43 @@ body {
     flex-grow: 1;
 }
 
+.item-icon {
+    width: 69px;
+    height: 69px;
+}
+
 .item-title {
     margin-bottom: 10px;
+}
+
+.item-description {
+    width: 220px;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("assets/Lato-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("assets/Lato-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("assets/Lato-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("assets/Lato-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
 }
