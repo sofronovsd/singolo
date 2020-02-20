@@ -33,35 +33,37 @@ body {
     line-height: 25px;
     color: #ffffff;
     font-family: "Lato", serif;
+    font-weight: 400;
 }
 
 .logo-star {
-    color: #d5625d;
+    color: #f06c64;
 }
 
 .navigation-item {
     display: inline-block;
     margin: 30px 0 20px 0;
     font-size: 12px;
-    color: white;
+    color: #ffffff;
     font-family: "Lato", serif;
+    font-weight: 400;
 }
 
 .navigation-item:hover {
-    color: red;
+    color: #f06c64;
     cursor: pointer;
 }
 
 .navigation-separator {
     display: inline-block;
     padding: 24px 12px 20px 13px;
-    color: white;
+    color: #ffffff;
 }
 
 .slider {
     height: 594px;
-    background-color: #f16c64;
-    border-bottom: #eb676b 6px solid;
+    background-color: #f06c64;
+    border-bottom: #ea676b 6px solid;
     display: flex;
 }
 
@@ -96,34 +98,34 @@ body {
 
 .iphone-horizontal {
     position: absolute;
-    left: 425px;
-    top: 270px;
+    left: 383px;
+    top: 218px;
 }
 
 .service-container {
     height: 453px;
-    background-color: #f2f3f3;
-    padding: 40px;
-    border-bottom: #f2f3f3 6px solid;
+    background-color: #f2f2f2;
+    padding: 40px 0 0 40px;
+    border-bottom: #ffffff 6px solid;
 }
 
 .service-header {
-    margin: 20px 0;
+    margin: 20px 40px 20px 0;
 }
 
 .service-title {
-    margin: 10px 0;
     font-family: "Lato", serif;
     font-size: 30px;
-    color: #666d8a;
+    font-weight: 900;
+    line-height: 35px;
+    color: #666d89;
 }
 
 .service-description {
-    margin-top: 20px;
+    margin-top: 18px;
     font-family: "Lato", serif;
-    color: #666d8a;
+    color: #666d89;
     font-size: 18px;
-    font-weight: 300;
     letter-spacing: -0.2px;
     line-height: 30px;
     text-align: justify;
@@ -133,36 +135,45 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 46px;
 }
 
 .service-item {
     display: flex;
     flex-direction: row;
-    width: 33%;
-    height: 100px;
-}
-
-.item-left-side {
-    width: auto;
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 33px;
 }
 
 .item-right-side {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    margin-left: 18px;
 }
 
 .item-icon {
-    width: 69px;
-    height: 69px;
+    width: 62px;
+    height: 62px;
 }
 
 .item-title {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
+    font-family: "Lato", serif;
+    color: #666d89;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: -0.1px;
 }
 
 .item-description {
-    width: 220px;
+    font-family: "Lato", serif;
+    color: #666d89;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: justify;
 }
 
 @font-face {
