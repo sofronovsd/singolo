@@ -12,28 +12,28 @@ body {
 
 .header {
     display: flex;
+    align-items: center;
+    padding: 0 20px;
     height: 89px;
     background-color: #292d37;
     border-bottom: #2f3444 6px solid;
-    align-items: center;
-    padding: 0 20px;
 }
 
 .navigation-panel {
     display: flex;
-    flex-grow: 1;
     justify-content: flex-end;
+    flex-grow: 1;
     margin-right: 20px;
 }
 
 .logo {
-    letter-spacing: -0.5px;
     margin-left: 20px;
-    font-size: 25px;
-    line-height: 25px;
-    color: #ffffff;
     font-family: "Lato", serif;
     font-weight: 400;
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: -0.5px;
+    color: #ffffff;
 }
 
 .logo-star {
@@ -43,15 +43,28 @@ body {
 .navigation-item {
     display: inline-block;
     margin: 30px 0 20px 0;
-    font-size: 12px;
-    color: #ffffff;
     font-family: "Lato", serif;
     font-weight: 400;
+    font-size: 12px;
+    color: #ffffff;
 }
 
 .navigation-item:hover {
-    color: #f06c64;
     cursor: pointer;
+    color: #f06c64;
+}
+
+.navigation-item:after {
+    content: ".";
+    position: relative;
+    left: 15px;
+    top: -3px;
+    margin-right: 23px;
+    color: #ffffff;
+}
+
+.navigation-item:last-child:after {
+    display: none;
 }
 
 .navigation-separator {
@@ -61,25 +74,25 @@ body {
 }
 
 .slider {
+    display: flex;
     height: 594px;
     background-color: #f06c64;
     border-bottom: #ea676b 6px solid;
-    display: flex;
 }
 
 .arrow-right {
-    height: 100%;
     display: flex;
     align-items: center;
-    transform: rotate(180deg);
     margin: -3px 24px 0 0;
+    height: 100%;
+    transform: rotate(180deg);
 }
 
 .arrow-left {
-    height: 100%;
     display: flex;
     align-items: center;
     margin: -3px 0 0 24px;
+    height: 100%;
 }
 
 .arrow-interactive:hover {
@@ -103,31 +116,32 @@ body {
 }
 
 .service-container {
+    padding: 40px 0 0 40px;
     height: 453px;
     background-color: #f2f2f2;
-    padding: 40px 0 0 40px;
     border-bottom: #ffffff 6px solid;
 }
 
 .service-header {
-    margin: 20px 40px 20px 0;
+    margin: 20px 40px 0 0;
 }
 
 .service-title {
     font-family: "Lato", serif;
-    font-size: 30px;
     font-weight: 900;
+    font-size: 30px;
     line-height: 35px;
+    letter-spacing: -0.2px;
     color: #666d89;
 }
 
 .service-description {
     margin-top: 18px;
     font-family: "Lato", serif;
-    color: #666d89;
     font-size: 18px;
+    line-height: 32px;
     letter-spacing: -0.2px;
-    line-height: 30px;
+    color: #666d89;
     text-align: justify;
 }
 
@@ -135,7 +149,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 46px;
+    margin-top: 42px;
 }
 
 .service-item {
@@ -161,19 +175,21 @@ body {
 .item-title {
     margin-bottom: 9px;
     font-family: "Lato", serif;
-    color: #666d89;
+    font-weight: 900;
     font-size: 18px;
     line-height: 18px;
-    font-weight: 900;
     letter-spacing: -0.1px;
+    color: #666d89;
 }
 
 .item-description {
+    height: 64px;
     font-family: "Lato", serif;
-    color: #666d89;
     font-size: 12px;
     line-height: 22px;
+    color: #666d89;
     text-align: justify;
+    overflow: hidden;
 }
 
 @font-face {
