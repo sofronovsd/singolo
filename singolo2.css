@@ -1,0 +1,52 @@
+@import "fonts.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", serif;
+    width: 1020px;
+}
+
+.portfolio {
+    height: 870px;
+    background-color: #2d303a;
+    padding: 60px 40px;
+}
+
+.portfolio__title {
+    margin-bottom: 22px;
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: -0.1px;
+    color: #666d89;
+}
+
+.portfolio__description {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666d89;
+}
+
+.filter {
+    display: flex;
+}
+
+.filter__button {
+    margin-top: 16px;
+    margin-right: 10px;
+    padding: 0 6px;
+    border: #666d89 1px solid;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #666d89;
+}
+
+.about {
+    height: 730px;
+    background-color: #f2f2f2;
+}
