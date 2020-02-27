@@ -1,22 +1,23 @@
-@import "fonts.css";
+@import "assets/fonts.css";
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
+.wrapper {
+    position: relative;
+    margin: 0 auto;
     width: 1020px;
-}
-
-.uppercase {
-    text-transform: uppercase;
+    font-family: "Lato", serif;
 }
 
 .header {
     display: flex;
     align-items: center;
     padding: 0 20px;
-    height: 89px;
+    height: 95px;
     background-color: #292d37;
     border-bottom: #2f3444 6px solid;
 }
@@ -38,11 +39,15 @@ body {
     color: #ffffff;
 }
 
-.logo-star {
+.logo_uppercase {
+    text-transform: uppercase;
+}
+
+.logo_star {
     color: #f06c64;
 }
 
-.navigation-item {
+.navigation-panel__item {
     display: inline-block;
     margin: 30px 0 20px 0;
     font-family: "Lato", serif;
@@ -51,21 +56,29 @@ body {
     color: #ffffff;
 }
 
-.navigation-item:hover {
-    cursor: pointer;
+.navigation-panel__item_uppercase {
+    text-transform: uppercase;
+}
+
+.navigation-panel__item_active {
     color: #f06c64;
 }
 
-.navigation-item:after {
+.navigation-panel__item:hover {
+    cursor: pointer;
+}
+
+.navigation-panel__item:after {
     content: ".";
     position: relative;
     left: 15px;
     top: -3px;
     margin-right: 23px;
     color: #ffffff;
+    text-decoration: none;
 }
 
-.navigation-item:last-child:after {
+.navigation-panel__item:last-child:after {
     display: none;
 }
 
@@ -77,7 +90,7 @@ body {
 
 .slider {
     display: flex;
-    height: 594px;
+    height: 600px;
     background-color: #f06c64;
     border-bottom: #ea676b 6px solid;
 }
@@ -90,7 +103,7 @@ body {
     transform: rotate(180deg);
 }
 
-.arrow-left {
+.slider__arrow_left {
     display: flex;
     align-items: center;
     margin: -3px 0 0 24px;
@@ -101,17 +114,17 @@ body {
     cursor: pointer;
 }
 
-.pictures {
+.slider__content {
     flex-grow: 1;
 }
 
-.iphone-vertical {
+.slider__iphone_vertical {
     position: absolute;
     left: 96px;
     top: 140px;
 }
 
-.iphone-horizontal {
+.slider__iphone_horizontal {
     position: absolute;
     left: 383px;
     top: 218px;
@@ -119,16 +132,16 @@ body {
 
 .service-container {
     padding: 40px 0 0 40px;
-    height: 453px;
+    height: 500px;
     background-color: #f2f2f2;
     border-bottom: #ffffff 6px solid;
 }
 
-.service-header {
+.service-container__header {
     margin: 20px 40px 0 0;
 }
 
-.service-title {
+.service-container__title {
     font-family: "Lato", serif;
     font-weight: 900;
     font-size: 30px;
@@ -137,7 +150,7 @@ body {
     color: #666d89;
 }
 
-.service-description {
+.service-container__description {
     margin-top: 18px;
     font-family: "Lato", serif;
     font-size: 18px;
@@ -147,14 +160,14 @@ body {
     text-align: justify;
 }
 
-.service-items {
+.services {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 42px;
 }
 
-.service-item {
+.item {
     display: flex;
     flex-direction: row;
     width: 300px;
@@ -162,19 +175,19 @@ body {
     margin-bottom: 33px;
 }
 
-.item-right-side {
+.item__right-block {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     margin-left: 18px;
 }
 
-.item-icon {
+.item__icon {
     width: 62px;
     height: 62px;
 }
 
-.item-title {
+.item__title {
     margin-bottom: 9px;
     font-family: "Lato", serif;
     font-weight: 900;
@@ -184,7 +197,7 @@ body {
     color: #666d89;
 }
 
-.item-description {
+.item__description {
     height: 64px;
     font-family: "Lato", serif;
     font-size: 12px;
