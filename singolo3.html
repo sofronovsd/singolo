@@ -15,13 +15,14 @@
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </p>
         <section class="order__content">
-            <form method="post" class="order-form">
-                <input class="order-form__field" type="text" placeholder="Name (Required)" required>
-                <input class="order-form__field" type="email" placeholder="Email (Required)" required>
-                <input class="order-form__field" type="text" placeholder="Subject" required>
+            <form method="post" action="#" class="order-form">
+                <input class="order-form__field" type="text" name="name" placeholder="Name (Required)" required>
+                <input class="order-form__field" type="email" name="mail" placeholder="Email (Required)" required>
+                <input class="order-form__field" type="text" name="subject" placeholder="Subject">
                 <textarea class="order-form__field order-form__field_textarea"
-                          placeholder="Describe your project in detail..."
-                          required></textarea>
+                          name="description"
+                          placeholder="Describe your project in detail..."></textarea>
+                <button type="submit" class="order-form__submit-button">Submit</button>
             </form>
             <section class="contact-information">
                 <h3 class="contact-information__header">Contact Information</h3>
@@ -32,22 +33,39 @@
                     Morbi at aliquet turpis, et consequat felis.
                 </p>
                 <div class="contacts">
-                        <a class="contacts__item">
-                            <img src="assets/location.svg" class="icon" alt="location">
-                            <span>Elm St. 14/05 Lost City</span>
-                        </a>
-                        <a class="contacts__item">
-                            <img src="assets/phone.svg" class="icon" alt="phone">
-                            <span>03528 331 86 35</span>
-                        </a>
-                        <a class="contacts__item">
-                            <img src="assets/mail.svg" class="icon" alt="mail">
-                            <span>info@singolo.com</span>
-                        </a>
+                    <div class="contact-item">
+                        <i class="contact-item__icon icon-location"></i>
+                        <span class="contact-item__description">Elm St. 14/05 Lost City</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="contact-item__icon icon-phone"></i>
+                        <a class="contact-item__description" href="tel:035283318635">03528 331 86 35</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="contact-item__icon icon-mail"></i>
+                        <a class="contact-item__description" href="mailto:info@singolo.com">info@singolo.com</a>
+                    </div>
                 </div>
             </section>
         </section>
     </section>
+    <footer class="footer">
+        <h5 class="footer-copyright">© Copyright 2013</h5>
+        <ul class="footer-icons">
+            <li class="footer-icons__item">
+                <a class="footer-icon icon_facebook"></a>
+            </li>
+            <li class="footer-icons__item">
+                <a class="footer-icon icon_google"></a>
+            </li>
+            <li class="footer-icons__item">
+                <a class="footer-icon icon_twitter"></a>
+            </li>
+            <li class="footer-icons__item">
+                <a class="footer-icon icon_linked-in"></a>
+            </li>
+        </ul>
+    </footer>
 </div>
 </body>
 </html>
