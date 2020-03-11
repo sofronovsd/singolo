@@ -237,7 +237,7 @@
         </p>
         <section class="order__content">
             <form method="post" action="#" class="order-form">
-                <input class="order-form__field" type="text" name="name" placeholder="Name (Required)" required>
+                <input class="order-form__field" type="text" name="name" pattern="^[A-Za-zА]+$" placeholder="Name (Required)" required>
                 <input class="order-form__field" type="email" name="mail" placeholder="Email (Required)" required>
                 <input class="order-form__field" type="text" name="subject" placeholder="Subject">
                 <textarea class="order-form__field order-form__field_textarea"
