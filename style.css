@@ -14,10 +14,13 @@
 }
 
 .header {
+    position: fixed;
     display: flex;
     align-items: center;
     padding: 0 20px;
     height: 95px;
+    width: inherit;
+    z-index: 1000;
     background-color: #2d303a;
     border-bottom: #2f3444 6px solid;
 }
@@ -91,25 +94,31 @@
     color: #ffffff;
 }
 
+.carousel__item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
 .slider {
     display: flex;
-    height: 600px;
-    background-color: #f06c64;
-    border-bottom: #ea676b 6px solid;
+    height: 695px;
 }
 
 .slider__arrow {
-    display: flex;
-    align-items: center;
+    position: absolute;
+    z-index: 1;
 }
 
 .slider__arrow_right {
-    margin: 270px 23px 0 0;
+    right: 23px;
+    top: 365px;
     transform: rotate(180deg);
 }
 
 .slider__arrow_left {
-    margin: 269px 0 0 25px;
+    left: 25px;
+    top: 364px;
 }
 
 .slider__arrow:hover {
@@ -118,7 +127,86 @@
 }
 
 .slider__content {
-    flex-grow: 1;
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: 0.5s ease-in-out;
+}
+
+.slider__content_red {
+    background-color: #f06c64;
+    border-bottom: #ea676b 6px solid;
+}
+
+.slider__content_blue {
+    background-color: #648BF0;
+    border-bottom: #648BF0 6px solid;
+}
+
+.slider__content_active {
+    display: block;
+}
+
+.slider__content_next {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.slider__background {
+    display: none;
+    position: absolute;
+    top: 213px;
+    left: 126px;
+    z-index: 1000;
+}
+
+.slider__background_horizontal {
+    top: 210px;
+    left: 558px;
+    transform: rotate(90deg);
+}
+
+.slider__background_active {
+    display: block;
 }
 
 .slider__iphone-vertical {
@@ -134,21 +222,18 @@
 }
 
 .slider__iphone-left {
-    display: none;
     position: absolute;
     left: 252px;
     top: 247px;
 }
 
 .slider__iphone-center {
-    display: none;
     position: absolute;
     left: 383px;
     top: 138px;
 }
 
 .slider__iphone-right {
-    display: none;
     position: absolute;
     left: 612px;
     top: 247px;
@@ -598,4 +683,39 @@ textarea::placeholder {
 .footer-icon:hover {
     opacity: 0.5;
     cursor: pointer;
+}
+
+.modal-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(0,0,0,0.5);
+    transition: opacity 400ms ease-in;
+    z-index: 9999;
+}
+
+.modal-dialog_active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-dialog__content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    padding: 1%;
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    background: #f06c64;
+}
+
+.modal-dialog__text {
+    overflow-wrap: break-word;
 }
