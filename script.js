@@ -46,11 +46,9 @@ document.querySelector('.portfolio__filter').addEventListener('click', (event) =
         });
         target.classList.add('filter__button_active');
 
-        let imgArr = document.querySelectorAll('.grid__item');
-        let grid = document.querySelector('.grid');
-        for (let i = 0; i < imgArr.length - 1; i++) {
-            grid.appendChild(imgArr[i]);
-        }
+        const imgArr = document.querySelectorAll('.grid__item');
+        const grid = document.querySelector('.grid');
+        grid.insertBefore(imgArr.item(imgArr.length - 1), imgArr.item(0));
     }
 
 });
@@ -70,7 +68,7 @@ const iphoneVertical = document.querySelector('.slider__iphone-vertical');
 const iphoneHorizontal = document.querySelector('.slider__iphone-horizontal');
 
 iphoneVertical.addEventListener('click', () => {
-    let verticalBackground = document.querySelector('.slider__background');
+    const verticalBackground = document.querySelector('.slider__background');
     if (verticalBackground.classList.contains('slider__background_active')) {
         verticalBackground.classList.remove('slider__background_active');
     } else {
@@ -79,7 +77,7 @@ iphoneVertical.addEventListener('click', () => {
 });
 
 iphoneHorizontal.addEventListener('click', () => {
-    let horizontalBackground = document.querySelector('.slider__background_horizontal');
+    const horizontalBackground = document.querySelector('.slider__background_horizontal');
     if (horizontalBackground.classList.contains('slider__background_active')) {
         horizontalBackground.classList.remove('slider__background_active');
     } else {
@@ -104,13 +102,13 @@ let isEnabled = true;
 
 const switchSlide = (index) => currentSlideIndex = (index + slides.length) % slides.length;
 
-const nextSlide  = (index) => {
+const nextSlide = (index) => {
     hideSlide('to-left');
     switchSlide(index + 1);
     showSlide('from-right');
 };
 
-const prevSlide  = (index) => {
+const prevSlide = (index) => {
     hideSlide('to-right');
     switchSlide(index - 1);
     showSlide('from-left');
@@ -150,10 +148,10 @@ document.querySelector('.slider__arrow_left').addEventListener('click', () => {
 let form = document.querySelector('form');
 form.onsubmit = (event) => {
     event.preventDefault();
-    let elements = event.target.elements;
+    const elements = event.target.elements;
     let result = `Письмо отправлено<br>`;
 
-    let subjectValue = elements.subject.value;
+    const subjectValue = elements.subject.value;
     if (subjectValue.trim() === '') {
         result += `Без темы<br>`;
     } else {
@@ -167,9 +165,9 @@ form.onsubmit = (event) => {
         result += `Описание: ${descriptionValue}<br>`;
     }
 
-    let dialog = document.querySelector('.modal-dialog');
+    const dialog = document.querySelector('.modal-dialog');
     dialog.classList.add('modal-dialog_active');
-    let dialogText = document.querySelector('.modal-dialog__text');
+    const dialogText = document.querySelector('.modal-dialog__text');
     dialogText.innerHTML = result;
 
     modalBtn.addEventListener('click', () => {
