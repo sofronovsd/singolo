@@ -181,12 +181,14 @@ const burgerMenu = document.querySelector('.burger-menu__icon');
 burgerMenu.addEventListener('click', (event) => {
     const overlay = document.querySelector('.overlay');
     overlay.classList.add('overlay_active');
+    document.body.style.overflow = 'hidden';
 });
 
 const burgerMenuActive = document.querySelector('.burger-menu_active');
 burgerMenuActive.addEventListener('click', (event) => {
     const overlay = document.querySelector('.overlay');
     overlay.classList.remove('overlay_active');
+    document.body.style.overflow = 'auto';
 });
 
 document.querySelector('.side-menu__navigation').addEventListener('click', (event) => {
@@ -227,5 +229,6 @@ document.querySelector('.side-menu__navigation').addEventListener('click', (even
 
         const overlay = document.querySelector('.overlay');
         overlay.classList.remove('overlay_active');
+        document.body.style.overflow = 'auto';
     }
 });
